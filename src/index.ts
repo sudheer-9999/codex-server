@@ -11,12 +11,8 @@ const app = express();
 const httpServer = createServer(app);
 
 const corsOptions = {
-  origin: [
-    process.env.CLIENT_URL || "http://localhost:3000",
-    "https://your-vercel-app.vercel.app",
-  ],
+  origin: "*",
   methods: ["GET", "POST"],
-  credentials: true,
 };
 
 app.use(cors(corsOptions));
